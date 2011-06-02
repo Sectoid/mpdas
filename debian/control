@@ -11,6 +11,8 @@ Vcs-Browser: https://github.com/Sectoid/mpdas
 Package: mpdas
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: mpd
+Enhances: mpd
 Description: An AudioScrobbler client for MPD
  mpdas is an AudioScrobbler client for MPD written in C++. 
  It uses libcurl and libmpd.
