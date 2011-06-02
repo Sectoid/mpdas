@@ -6,6 +6,7 @@ OUT	= mpdas
 PREFIX ?= /usr/local
 MANPREFIX ?= ${PREFIX}/man/man1
 CONFIG ?= $(PREFIX)/etc
+DESTDIR ?=
 
 CXXFLAGS	+= `pkg-config --cflags libmpd libcurl` 
 LIBS		= `pkg-config --libs libmpd libcurl`
@@ -27,9 +28,11 @@ clean:
 	rm -rf $(OBJ) $(OUT)
 
 install: all
-	install mpdas ${PREFIX}/bin
-	install -m 644 mpdas.1 ${MANPREFIX}/mpdas.1
+	install -D mpdas $(DESTDIR)${PREFIX}/bin/mpdas
+	install -D -m 644 mpdas.1 $(DESTDIR)${MANPREFIX}/mpdas.1
+	install -D -m 644 mpdasrc.example $(DESTDIR)${CONFIG}/mpdasrc
 
 uninstall:
 	-rm ${PREFIX}/bin/mpdas
 	-rm ${MANPREFIX}/mpdas.1
+	-rm ${CONFIG}/mpdasrc
