@@ -1,0 +1,18 @@
+Source: mpdas
+Section: unknown
+Priority: extra
+Maintainer: Gleb Golubitsky <sectoid@gnolltech.org>
+Build-Depends: debhelper (>= 7.0.50~), libcurl-dev, libmpd-dev
+Standards-Version: 3.9.1
+Homepage: http://50hz.ws/mpdas/
+Vcs-Git: git://github.com/Sectoid/mpdas.git
+Vcs-Browser: https://github.com/Sectoid/mpdas
+
+Package: mpdas
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: An AudioScrobbler client for MPD
+ mpdas is an AudioScrobbler client for MPD written in C++. 
+ It uses libcurl and libmpd.
+ .
+ It supports the latest AudioScrobbler protocol (2.0).

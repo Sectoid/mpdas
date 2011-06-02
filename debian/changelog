@@ -1,0 +1,5 @@
+mpdas (0.3.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #513524)
+
+ -- Gleb Golubitsky <sectoid@gnolltech.org>  Thu, 02 Jun 2011 17:36:58 +0300
